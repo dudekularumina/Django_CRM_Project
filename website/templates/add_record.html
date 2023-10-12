@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="card text-bg-light mb-12 ms-sm-5 me-md-4" style="max-width: 50rem;">
+   
+    <div class="card-header"><h3>Add New Record</h3></div>
+    <div class="card-body">
+
+    <form method="POST" action="{% url 'add_record' %}">
+    {% csrf_token %}
+    {{ form.as_p}}
+
+    </br>
+   <button type="submit" class="btn btn-outline-secondary"><b>Add Record </b></button>
+   </form>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
